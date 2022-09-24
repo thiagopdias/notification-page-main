@@ -1,0 +1,191 @@
+:root {
+    /* Primary Colors */
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+
+    /* Neutral Colors */
+    --White: hsl(0, 0%, 100%);
+    --VeryLightGrayishBlue: hsl(210, 60%, 98%);
+    --LightGrayishBlue1: hsl(211, 68%, 94%);
+    --LightGrayishBlue2: hsl(205, 33%, 90%);
+    --GrayishBlue: hsl(219, 14%, 63%);
+    --DarkGrayishBlue: hsl(219, 12%, 42%);
+    --VeryDarkBlue: hsl(224, 21%, 14%);
+
+    font-size: 62.5%; /* 1rem == 10px */
+}
+
+.notificationsContainer {
+    font-size: 1.6rem;
+
+    max-width: 75rem;
+    margin: 5rem auto;
+    padding: 2.4rem;
+
+    background-color: var(--White);
+    border-radius: 2rem;
+    box-shadow: 5px 10px 5px var(--LightGrayishBlue2);
+}
+
+.notificationsContainer header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 3rem;
+}
+
+.notificationsContainer header h1 {
+    color: var(--VeryDarkBlue);
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.notificationsContainer header h1 span {
+    display: inline-block;
+    background-color: var(--Blue);
+    color: var(--White);
+    border-radius: 1rem;
+    text-align: center;
+
+    padding: .5rem 1.5rem;
+}
+
+.notificationsContainer header button {
+    padding: .5rem;
+
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    color: var(--GrayishBlue);
+
+    cursor: pointer;
+    transition: .5s;
+}
+
+.notificationsContainer header button:hover {
+    color: var(--Blue);
+}
+
+.card {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+
+    margin-bottom: 2rem;
+    padding: 2rem;
+}
+
+.card.unread {
+    background-color: var(--LightGrayishBlue1);
+    border-radius: 1rem;
+    box-shadow: 3px 5px 5px var(--LightGrayishBlue2);
+}
+
+.card.unread .info-notification p span.flag {
+    display: inline-block;
+    background-color: var(--Red);
+
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+
+    margin-left: 1rem;
+}
+
+.card .profile-photo img {
+    width: 5rem;
+}
+
+.card .info-notification {
+    width: 100%;
+}
+
+.card .info-notification p {
+    color: var(--GrayishBlue);
+}
+
+.card .info-notification p strong:nth-child(1) {
+    color: var(--VeryDarkBlue);
+    font-weight: 800;
+    
+    transition: .5s;
+}
+
+.card .info-notification p strong:nth-child(2) {
+    color: var(--DarkGrayishBlue);
+    font-weight: 800;
+
+    transition: .5s;
+}
+
+.card .info-notification p strong:nth-child(1):hover,
+.card .info-notification p strong:nth-child(2):hover {
+    color: var(--Blue);
+    cursor: pointer;
+}
+
+.card .info-notification p strong.chess-club {
+    color: var(--Blue);
+}
+
+.card .info-notification span {
+    display: inline-block;
+
+    color: var(--GrayishBlue);
+    margin-top: .5rem;
+}
+
+.card .info-notification #message {
+    margin-top: 2rem;
+    border: 1px solid var(--GrayishBlue);
+    border-radius: .5rem;
+    background-color: var(--VeryLightGrayishBlue);
+    box-shadow: 3px 5px 5px var(--LightGrayishBlue2);
+
+    padding: 2rem;
+
+    transition: .5s;
+}
+
+.card .info-notification #message p {
+    text-align: left;
+}
+
+.card .info-notification #message:hover {
+    background-color: var(--LightGrayishBlue1);
+    cursor: pointer;
+}
+
+.card .image-chess {
+    width: 6rem;
+    border-radius: 1rem;
+    padding: .5rem;
+    transition: .5s;
+}
+
+.card .image-chess:hover {
+    cursor: pointer;
+    background-color:  var(--LightGrayishBlue1);
+}
+
+.card .image-chess img{
+    display: block;
+    width: 5rem;
+}
+
+@media(max-width: 780px) {
+    .notificationsContainer {
+        margin: 5rem 2rem;
+    }
+}
+
+@media(max-width: 445px) {
+    .notificationsContainer {
+        font-size: 1rem;
+    }
+
+    .notificationsContainer header h1 {
+        font-size: 1.6rem;
+    }
+}
